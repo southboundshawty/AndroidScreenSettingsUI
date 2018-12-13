@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900");
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  display: flex;
+  
+  justify-content: center;
+  
+  margin-top: 4px;
+
+  -webkit-font-smoothing: antialiased;
+
+  text-rendering: optimizeLegibility;
+
+  -moz-osx-font-smoothing: grayscale;
+
+  font-feature-settings: "liga";
+}
+
+label.input-toggle {
+  line-height: 0;
+  font-size: 0;
+  display: inline-block;
+  margin: 0;
+}
+
+label.input-toggle > span {
+  display: inline-block;
+  position: relative;
+  background-image: -webkit-linear-gradient(
+    left,
+    #848484 0%,
+    #848484 50%,
+    #c0cfff 50%,
+    #c0cfff 100%
+  );
+  background-image: linear-gradient(
+    to right,
+    #848484 0%,
+    #848484 50%,
+    #c0cfff 50%,
+    #c0cfff 100%
+  );
+  background-size: 64px 14px;
+  background-position: 0%;
+  border-radius: 100px;
+  width: 32px;
+  height: 16px;
+  cursor: pointer;
+  -webkit-transition: background-position 0.2s ease-in;
+  transition: background-position 0.2s ease-in;
+}
+
+label.input-toggle > input:checked + span {
+  background-position: -100%;
+}
+
+label.input-toggle > span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background: #f1f1f1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-transition: left 0.2s ease-in, background-color 0.2s ease-in,
+    -webkit-transform 0.3s ease;
+  transition: left 0.2s ease-in, background-color 0.2s ease-in,
+    -webkit-transform 0.3s ease;
+  transition: left 0.2s ease-in, background-color 0.2s ease-in,
+    transform 0.3s ease;
+  transition: left 0.2s ease-in, background-color 0.2s ease-in,
+    transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+label.input-toggle > input:checked + span:after {
+  left: calc(100% - 18px);
+  background-color: #3d5afe;
+}
+
+label.input-toggle > span:active:after {
+  -webkit-transform: translateY(-50%) scale3d(1.15, 0.85, 1);
+  transform: translateY(-50%) scale3d(1.15, 0.85, 1);
+}
+
+label.input-toggle > input:disabled + span:active:after {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+label.input-toggle > input:disabled + span {
+  cursor: default;
+}
+
+label.input-toggle > input:disabled + span {
+  background: #d5d5d5;
+}
+
+label.input-toggle > input:disabled + span:after {
+  background: #bdbdbd;
+}
+
+label.input-toggle > input {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+@media (max-width: 1024px) {
+  .android-ui {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+  }
+
+  .android-ui__button {
+    padding: 8px;
+  }
+
+  .android-ui-header {
+    display: flex;
+
+    background-color: #fff;
+
+    z-index: 2;
+
+    justify-content: space-between;
+
+    color: #304ffe;
+
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.14);
+
+    height: 64px;
+    width: 100%;
+
+    position: fixed;
+  }
+
+  .android-ui-header .android-ui__button {
+    width: 48px;
+    height: 48px;
+
+    box-sizing: border-box;
+
+    border-radius: 100px;
+
+    transition: 0.3s;
+  }
+
+  .android-ui-header .android-ui__button:active {
+    background-color: #eeeeee;
+
+    transition: 0.3s;
+  }
+
+  .android-ui-header_left {
+    display: flex;
+
+    align-items: center;
+
+    margin-left: 8px;
+  }
+
+  .android-ui-header_right {
+    display: flex;
+
+    align-items: center;
+
+    margin-right: 8px;
+  }
+
+  .android-ui-header__title {
+    font-size: 17pt;
+
+    font-weight: 500;
+
+    margin-left: 24px;
+  }
+
+  .android-ui-body {
+      margin-top: 64px;
+  }
+
+  .android-ui-body-wrapper {
+      overflow-y: scroll;
+  }
+
+  .android-ui-body__item {
+    display: flex;
+
+    padding-left: 80px;
+
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 12pt;
+
+    box-sizing: content-box;
+
+    white-space: wrap;
+
+    overflow: hidden;
+
+    min-height: 72px;
+    max-height: 128px;
+
+    height: min-content;
+    
+    width: calc(100% - 80px);
+
+    transition: 0.3s;
+
+    background-color: #fff;
+  }
+
+  .android-ui-body__item-wrapper {
+      padding: 8px 0;
+  }
+
+  .android-ui-body__item-android-ui__button {
+    margin-right: 16px;
+  }
+
+  .android-ui-body__item_left {
+    flex-direction: column;
+  }
+
+  .android-ui-body__item-content {
+    color: #757575;
+  }
+
+  .android-ui-body__item:hover {
+    background-color: #eeeeee;
+
+    transition: 0.3s;
+  }
+}
