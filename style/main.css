@@ -135,7 +135,7 @@ label.input-toggle > input {
   height: 0;
 }
 
-@media (max-width: 1024px) {
+//@media (max-width: 1024px) {
   .android-ui {
     display: flex;
 
@@ -266,4 +266,4 @@ label.input-toggle > input {
 
     transition: 0.3s;
   }
-}
+//}
