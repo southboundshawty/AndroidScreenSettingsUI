@@ -11,12 +11,18 @@
     <div class="android-ui">
       <div class="android-ui-header">
         <div class="android-ui-header_left">
-          <div class="android-ui__button"><i class="material-icons">arrow_back</i></div>
+          <div class="android-ui__button">
+            <i class="material-icons">arrow_back</i>
+          </div>
           <div class="android-ui-header__title">Экран</div>
         </div>
         <div class="android-ui-header_right">
-          <div class="android-ui__button"><i class="material-icons">search</i></div>
-          <div class="android-ui__button"><i class="material-icons">help_outline</i></div>
+          <div class="android-ui__button">
+            <i class="material-icons">search</i>
+          </div>
+          <div class="android-ui__button">
+            <i class="material-icons">help_outline</i>
+          </div>
         </div>
       </div>
       <div class="android-ui-body">
@@ -87,15 +93,17 @@
           <div class="android-ui-body__item">
             <div class="android-ui-body__item-wrapper">
               <div class="android-ui-body__item_left">
-                <div class="android-ui-body__item-title">
-                  Автоповорот экрана
-                </div>
-                <div class="android-ui-body__item-content"></div>
+                <label class="android-ui-label" for="auto-rotate-input">
+                  <div class="android-ui-body__item-title">
+                    Автоповорот экрана
+                  </div>
+                  <div class="android-ui-body__item-content"></div>
+                </label>
               </div>
             </div>
             <div class="android-ui-body__item_right">
               <div class="android-ui-body__item-android-ui__button">
-                <label class="input-toggle">
+                <label id="auto-rotate-input" class="input-toggle">
                   <input type="checkbox" checked /> <span></span>
                 </label>
               </div>
