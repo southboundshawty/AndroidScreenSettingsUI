@@ -8,6 +8,9 @@
   user-select: none;
 
   font-family: "Roboto", sans-serif;
+  
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+  -webkit-tap-highlight-color: transparent;
 }
 
 .material-icons {
@@ -269,7 +272,7 @@ label.input-toggle > input {
     color: #757575;
   }
 
-  .android-ui-body__item:hover {
+  .android-ui-body__item:active {
     background-color: #eeeeee;
 
     transition: 0.3s;
